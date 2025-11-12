@@ -6,6 +6,9 @@
     --neutral-gray-600: hsl(224, 23%, 55%);
     --neutral-blue-950: hsl(223, 47%, 23%);
 
+    --card-box-shadow: hsl(from var(--neutral-gray-600) h s l / 0.25);
+    --button-box-shadow: hsl(from var(--primary-blue-700) h s l / 0.25);
+
     /* TYPOGRAPHY */
     --fs-h1: 1.375rem;
     --fs-body: 1rem;
@@ -72,7 +75,7 @@ body {
     padding-block-end: 2.5rem;
     
     background-color: white;
-    box-shadow: hsl(from var(--neutral-gray-600) h s l / 0.25);
+    box-shadow: var(--card-box-shadow);
 
     @media (width < 768px) {
         margin: auto 1rem;
@@ -193,7 +196,7 @@ body {
 
 .btn--primary {
     --button-bg-color: var(--primary-blue-700);
-    box-shadow: 0 10px 15px hsl(from var(--primary-blue-700) h s l / 0.25);
+    box-shadow: 0 10px 15px var(--button-box-shadow);
 
     &:hover {
         background: hsl(from var(--primary-blue-700) h s 60%);
@@ -209,3 +212,4 @@ body {
         --button-text-color: var(--neutral-blue-950);
     }
 }
+
